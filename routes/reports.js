@@ -40,7 +40,7 @@ router.get('/monthly-summary', auth, async (req, res) => {
 });
 
 // Currency conversion endpoint (backend proxy)
-router.get('/convert', auth, async (req, res) => {
+router.get('/convert', async (req, res) => {
   try {
     const { from, to, amount } = req.query;
 

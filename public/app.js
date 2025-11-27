@@ -1,4 +1,4 @@
-const API = '/api';
+const API = 'https://personal-finance-backend.onrender.com/api';
 let token = null;
 let currentUser = null;
 let chart = null;
