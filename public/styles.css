@@ -1,0 +1,14 @@
+:root { --bg:#f4f7fb; --card:#fff; --accent:#3b82f6; --muted:#666; }
+body { margin:0; font-family:Inter, system-ui, Arial; background:var(--bg); color:#111; }
+.container { max-width:1100px; margin:24px auto; padding:12px; }
+header { display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; }
+h1 { margin:0; font-size:1.6rem; }
+.card { background:var(--card); padding:12px; border-radius:8px; box-shadow:0 6px 18px rgba(20,20,40,0.06); margin:8px; }
+.row { display:flex; gap:12px; flex-wrap:wrap; }
+.card input, .card select { display:block; width:100%; padding:8px; margin:8px 0; border:1px solid #e3e8ef; border-radius:6px; }
+.card button { background:var(--accent); color:white; border:none; padding:8px 12px; border-radius:6px; cursor:pointer; }
+.card button:hover { opacity:0.95; }
+.auth { display:flex; gap:12px; }
+#txList { max-height:300px; overflow:auto; }
+.txItem { display:flex; justify-content:space-between; padding:8px; border-bottom:1px dashed #eee; }
+.small { font-size:0.9rem; color:var(--muted); }

@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Personal Finance Tracker</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Personal Finance Tracker</h1>
+      <div id="userInfo"></div>
+    </header>
+
+    <section class="auth" id="authSection">
+      <div class="card">
+        <h3>Register</h3>
+        <input id="regName" placeholder="Name" />
+        <input id="regEmail" placeholder="Email" />
+        <input id="regPassword" type="password" placeholder="Password" />
+        <input id="regCurrency" placeholder="Base currency (e.g., USD)" value="USD" />
+        <button id="btnRegister">Register</button>
+      </div>
+
+      <div class="card">
+        <h3>Login</h3>
+        <input id="loginEmail" placeholder="Email" />
+        <input id="loginPassword" type="password" placeholder="Password" />
+        <button id="btnLogin">Login</button>
+      </div>
+    </section>
+
+    <section id="appSection" style="display:none;">
+      <div class="row">
+        <div class="card">
+          <h3>Add Transaction</h3>
+          <select id="txType"><option value="expense">Expense</option><option value="income">Income</option></select>
+          <input id="txAmount" type="number" placeholder="Amount" />
+          <input id="txCurrency" placeholder="Currency (e.g., USD)" value="USD" />
+          <select id="txCategory"><option value="">--Category--</option></select>
+          <input id="txDesc" placeholder="Description" />
+          <input id="txDate" type="date" />
+          <button id="btnAddTx">Add</button>
+        </div>
+
+        <div class="card">
+          <h3>Budgets (set for month)</h3>
+          <select id="budgetCategory"><option value="">--Category--</option></select>
+          <input id="budgetMonth" type="month" value="" />
+          <input id="budgetAmount" type="number" placeholder="Amount in base currency" />
+          <button id="btnSetBudget">Set Budget</button>
+
+          <h4>Monthly Summary</h4>
+          <input id="reportMonth" type="month" />
+          <button id="btnLoadReport">Load Report</button>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="card">
+          <h3>Transactions</h3>
+          <div id="txList"></div>
+        </div>
+
+        <div class="card">
+          <h3>Charts</h3>
+          <canvas id="chart"></canvas>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="card">
+          <h3>Currency Conversion</h3>
+          <input id="convFrom" placeholder="From (e.g., EUR)" />
+          <input id="convAmount" type="number" placeholder="Amount" value="1" />
+          <button id="btnConvert">Convert to base</button>
+          <div id="convResult"></div>
+        </div>
+      </div>
+
+      <div style="margin-top:20px;">
+        <button id="btnLogout">Logout</button>
+      </div>
+
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
